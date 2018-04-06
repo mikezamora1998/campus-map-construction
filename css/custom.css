@@ -1,0 +1,24 @@
+/*--- general styles for main content ---*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body, #mainMap {
+    height: 700px;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .returnBtn {
+        visibility: visible;
+    }
+}
+
+@media (min-width: 992px) {
+    .returnBtn {
+        visibility: hidden;
+    }
+}
