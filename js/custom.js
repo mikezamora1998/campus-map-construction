@@ -56,11 +56,15 @@ $(document).ready(function() {
                 fillOpacity: 0.7
             
         });
-        var statePopup = layer;
-        text = '<span><em><strong>' + layer.feature.properties.name + '</strong></em></span>';
         
-        statePopup.bindPopup(text).openPopup();
-       
+        var latlng = L.latLng(layer.feature.properties.center);
+
+        var popup = L.popup()
+        .setLatLng(latlng)
+        .setContent('<span><em><strong>' + layer.feature.properties.name + '</strong></em></span>')
+        .openOn(map);
+
+
         if (!L.Browser.ie && !L.Browser.opera) {
             layer.bringToFront();
         }
@@ -91,4 +95,5 @@ $(document).ready(function() {
         onEachFeature: onEachFeature
     }).addTo(map);
 
+    
 });

@@ -54,7 +54,8 @@ var statesData = {
         "id": "02",
         "properties": {
             "name": "Alaska",
-            "section": 1
+            "section": 1,
+            "center": [(65.80 * .4) + 2.5, -50 + (.4 * -151.00)]
         },
         "geometry": {
             "type": "MultiPolygon",
@@ -1296,8 +1297,8 @@ var statesData = {
         "id": "04",
         "properties": {
             "name": "Arizona",
-
-            "section": 1
+            "section": 1,
+            "center": [34.597,-111.709]
         },
         "geometry": {
             "type": "Polygon",
@@ -1394,7 +1395,8 @@ var statesData = {
         "id": "06",
         "properties": {
             "name": "California",
-            "section": 1
+            "section": 1,
+            "center": [36.492,-119.795]
         },
         "geometry": {
             "type": "Polygon",
@@ -1502,8 +1504,8 @@ var statesData = {
             "id": "08",
             "properties": {
                 "name": "Colorado",
-                "advisor": "Ms. Advisor 1",
                 "section": 1,
+                "center": [38.959,-105.469]
             },
             "geometry": {
                 "type": "Polygon",
@@ -1684,8 +1686,9 @@ var statesData = {
         "id": "13",
         "properties": {
             "name": "Georgia",
-            "section": 1
-        },
+            "section": 1,
+            "center": [33.247875, -83.441162]
+        },              
         "geometry": {
             "type": "Polygon",
             "coordinates": [
@@ -1830,7 +1833,8 @@ var statesData = {
         "id": "16",
         "properties": {
             "name": "Idaho",
-            "section": 1
+            "section": 1,
+            "center": [45.429,-115.181]
         },
         "geometry": {
             "type": "Polygon",
@@ -1991,7 +1995,8 @@ var statesData = {
         "id": "18",
         "properties": {
             "name": "Indiana",
-            "section": 1
+            "section": 1,
+            "center": [40.273502, -86.126976]
         },
         "geometry": {
             "type": "Polygon",
@@ -2714,7 +2719,8 @@ var statesData = {
         "id": "27",
         "properties": {
             "name": "Minnesota",
-            "section": 1
+            "section": 1,
+            "center": [46.392410,-94.636230]
         },
         "geometry": {
             "type": "Polygon",
@@ -2871,7 +2877,8 @@ var statesData = {
         "id": "29",
         "properties": {
             "name": "Missouri",
-            "section": 1
+            "section": 1,
+            "center": [37.964300, -91.831800]
         },
         "geometry": {
             "type": "Polygon",
@@ -2938,7 +2945,8 @@ var statesData = {
         "id": "30",
         "properties": {
             "name": "Montana",
-            "section": 1
+            "section": 1,
+            "center": [47.220,-109.336]
         },
         "geometry": {
             "type": "Polygon",
@@ -3170,7 +3178,8 @@ var statesData = {
         "id": "35",
         "properties": {
             "name": "New Mexico",
-            "section": 1
+            "section": 1,
+            "center": [34.525,-105.996]
         },
         "geometry": {
             "type": "Polygon",
@@ -3388,7 +3397,8 @@ var statesData = {
         "id": "39",
         "properties": {
             "name": "Ohio",
-            "section": 1
+            "section": 1,
+            "center": [40.417300, -82.907100]
         },
         "geometry": {
             "type": "Polygon",
@@ -3818,7 +3828,8 @@ var statesData = {
         "id": "48",
         "properties": {
             "name": "Texas",
-            "section": 1
+            "section": 1,
+            "center": [30.978,-98.130]
         },
         "geometry": {
             "type": "Polygon",
@@ -3984,7 +3995,8 @@ var statesData = {
         "id": "49",
         "properties": {
             "name": "Utah",
-            "section": 1
+            "section": 1,
+            "center": [39.538,-111.709]
         },
         "geometry": {
             "type": "Polygon",
@@ -4052,7 +4064,8 @@ var statesData = {
         "id": "51",
         "properties": {
             "name": "Virginia",
-            "section": 1
+            "section": 1,
+            "center": [37.926868, -78.024902]
         },
         "geometry": {
             "type": "MultiPolygon",
@@ -4420,7 +4433,8 @@ var statesData = {
         "id": "56",
         "properties": {
             "name": "Wyoming",
-            "section": 1
+            "section": 1,
+            "center": [43.037,-107.534]
         },
         "geometry": {
             "type": "Polygon",
