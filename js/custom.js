@@ -44,7 +44,7 @@ $(document).ready(function() {
     }
 
 
-    // Add definition and border highlight to layer selected
+    // Add definition, border, and popup highlight to layer selected
     function highlightFeature(e) {
         var layer = e.target;
 
@@ -64,6 +64,30 @@ $(document).ready(function() {
         .setContent('<span><em><strong>' + layer.feature.properties.name + '</strong></em></span>')
         .openOn(map);
 
+        if (!L.Browser.ie && !L.Browser.opera) {
+            layer.bringToFront();
+        }
+    }
+
+    // Add Popup to other layer selected
+    function highlightFeatureOther(e) {
+        var layer = e.target;
+
+        //set highlight color for other layer
+        // layer.setStyle({
+        //     weight: 3,
+        //     color: '#f4f4f4',
+        //     fillColor: '#ad132a',
+        //     dashArray: '',
+        //     fillOpacity: 0.7
+        // });
+
+        var latlng = L.latLng(layer.feature.properties.center);
+
+        var popup = L.popup()
+        .setLatLng(latlng)
+        .setContent('<span><em><strong>' + layer.feature.properties.name + '</strong></em></span>')
+        .openOn(map);
 
         if (!L.Browser.ie && !L.Browser.opera) {
             layer.bringToFront();
@@ -73,16 +97,24 @@ $(document).ready(function() {
     // Reset highlight
     function resetHighlight(e) {
         geojson.resetStyle(e.target);
-        
     }
 
     // Bring all the functions together
     function onEachFeature(feature, layer) {
+        //calls if layer is 1
         if(feature.properties.section == 1){
             layer.on({
                 // function called when pointer hovers on a state(layer)
-                
                 mouseover: highlightFeature,
+                // function called when pointer leaves a state(layer)
+                mouseout: resetHighlight,
+            });
+        }
+        //calls if layer is 2
+        if(feature.properties.section == 2){
+            layer.on({
+                // function called when pointer hovers on a state(layer)
+                mouseover: highlightFeatureOther,
                 // function called when pointer leaves a state(layer)
                 mouseout: resetHighlight,
             });
