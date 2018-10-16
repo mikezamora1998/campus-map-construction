@@ -12,13 +12,21 @@ $(document).ready(function() {
 
     // Map initialization
     var map = L.map('mainMap', {
-        center: [38, -97],
-        zoom: 4.8,
+        center: [22, -97],
+        zoom: 3.6,
         maxZoom: 7,
         fullscreenControl: true,
         layers: [light]
     });
-
+    
+    map.dragging.disable();
+    map.touchZoom.disable();
+	map.doubleClickZoom.disable();
+	map.scrollWheelZoom.disable();
+	map.boxZoom.disable();
+	map.keyboard.disable();
+	map.removeControl(map.zoomControl);
+	map.removeControl(map.fullscreenControl);
 
     // Declaration of global variables for functions below
     var geojson;
